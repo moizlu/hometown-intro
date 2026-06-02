@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Suspense } from 'react';
 
 import ModalWindowEntryPoint from "@/components/ui/ModalWindow";
 
@@ -18,14 +19,16 @@ const RootLayout = ({ children }: Readonly<{ children: React.ReactNode; }>) => {
         <html lang="ja" className="h-full antialiased bg-base text-label">
             <body className="min-h-full flex flex-col">
                 <main>
-                    <ModalWindowEntryPoint />
-                    <SplashScreen />
-                    <Header />
-                    <div className="mt-15">
-                        <Hero />
-                        {children}
-                        <Footer />
-                    </div>
+                    <Suspense fallback={<div>読み込み中...</div>}>
+                        <ModalWindowEntryPoint />
+                        <SplashScreen />
+                        <Header />
+                        <div className="mt-15">
+                            <Hero />
+                                {children}
+                            <Footer />
+                        </div>
+                    </Suspense>
                 </main>
             </body>
         </html>
