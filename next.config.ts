@@ -13,6 +13,7 @@ const withMDX = buildMdx({
 
 const nextConfig: NextConfig = {
   /* config options here */
+  output: 'export',
   reactCompiler: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   allowedDevOrigins: ['172.16.0.2'],
