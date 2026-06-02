@@ -117,7 +117,7 @@ const ModalWindow: React.FC = () => {
                 {hasControls && (
                 <button
                     title="Close" onClick={closeModal}
-                        className="z-100 transition-all duration-300 absolute top-0 right-0 bg-white/50 m-1 rounded-sm cursor-pointer hover:scale-110 w-[50px] h-[50px] flex items-center justify-center">
+                        className="z-10000 transition-all duration-300 absolute top-0 right-0 bg-white/50 m-1 rounded-sm cursor-pointer hover:scale-110 w-[50px] h-[50px] flex items-center justify-center">
                         <SvgIcon Svg={CloseIcon} size={50} />
                 </button>
                 )}
