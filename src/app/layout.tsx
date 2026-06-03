@@ -11,7 +11,12 @@ import Hero from "@/components/sections/Hero/Hero";
 
 export const metadata: Metadata = {
     title: "島根県ガイド",
-    description: ""
+    description: "",
+
+    other: {
+        "content-security-policy":
+        "default-src 'self'; script-src 'self' https://challenges.cloudflare.com https://static.cloudflareinsights.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; frame-src 'self' https://challenges.cloudflare.com; img-src 'self' data: https:;",
+    },
 };
 
 const RootLayout = ({ children }: Readonly<{ children: React.ReactNode; }>) => {
