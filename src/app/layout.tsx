@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: Readonly<{ children: React.ReactNode; }>) => {
     return (
         <html lang="ja" className="h-full antialiased bg-base text-label">
-            <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6ad929cfa1a84017aeb0e58d18d17133"}'></script>
+            {/* <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6ad929cfa1a84017aeb0e58d18d17133"}'></script> */}
             <body className="min-h-full flex flex-col">
                 <main>
                     <Suspense fallback={<div>読み込み中...</div>}>
